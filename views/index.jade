@@ -1,0 +1,23 @@
+extends layout
+
+block head
+	link(rel='stylesheet', href='/stylesheets/magicsuggest-min.css')
+	link(rel='stylesheet', href='/stylesheets/style.css')
+block content
+	h5 Try out the service..
+	.container
+		.row
+			textarea.form-control#tRawtextUrl(rows='5', placeholder='Enter text to analyze')
+		.row
+			button.btn.btn-primary#bAnalyze(type='button') Analyze
+			button.btn.btn-primary#bAnalyzeTest(type='button') Demo
+		.row#aResults.noDisplay
+			.panel.panel-success#resPanel
+				.panel-heading RawText - highlighted key words
+				.panel-body
+						#analysdText
+		.row
+			#hPhrases.noDisplay
+block scripts
+	script(src='/javascripts/magicsuggest-min.js')
+	script(src='/javascripts/script.js')
